@@ -1,0 +1,35 @@
+<div class="container main-container">
+
+    <h3>Horários Ponto de Ônibus</h3><br>
+
+    <div class="input-group mb-3">
+        <input type="text" [ngModel]="numeroPontoOnibus" (ngModelChange)="numeroPontoOnibus = $event"
+            placeholder="Digite o nº do ponto de ônibus" class="form-control">
+        <div class="input-group-append">
+            <button type="button" class="btn btn-primary" (click)="getHorariosPontoOnibus()">Ver horário</button>
+        </div>
+    </div>
+    <br><br>
+    <div *ngIf="numeroPontoOnibusView != ''">
+        <label style="font-weight: bold; font-size: 18px;">Ponto de ônibus: {{numeroPontoOnibusView}}</label>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nº linha</th>
+                    <th>Destino</th>
+                    <th>Próximo</th>
+                    <th>Seguinte</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of root.data">
+                    <th>{{item.numeroLinha}}</th>
+                    <td>{{item.destino}}</td>
+                    <td>{{item.proximo}}</td>
+                    <td>{{item.seguinte}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
