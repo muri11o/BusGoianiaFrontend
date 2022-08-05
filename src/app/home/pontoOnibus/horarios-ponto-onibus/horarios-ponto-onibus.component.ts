@@ -19,10 +19,6 @@ export class HorariosPontoOnibusComponent implements OnInit {
   public numeroPontoOnibusView: string;
   public root: RootHorarioPontoOnibus;
 
-  private h1: HorarioPontoOnibus = { numeroLinha: '934', destino:'R MINAS GERAIS', proximo:'1', seguinte:'---'};
-  private h2: HorarioPontoOnibus = { numeroLinha: '317', destino:'SANTO HILARIO', proximo:'17', seguinte:'---'};
-  private h3: HorarioPontoOnibus = { numeroLinha: '019', destino:'T CRUZEIRO', proximo:'8', seguinte:'---'};
-
   ngOnInit(): void {
   }
 
@@ -37,14 +33,5 @@ export class HorariosPontoOnibusComponent implements OnInit {
       },
        error => console.log(error)
      );
-
-    
-
-    //  this.root.success = true;
-    //  this.root.data = [
-    //   this.h1, this.h2, this.h3
-    //  ]
-
-     //console.log(this.root);
   }
 }

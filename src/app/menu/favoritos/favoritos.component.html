@@ -1,3 +1,11 @@
-<div class="container main-container">
+<div class="container sub-container">
     <h1>FAVORITOS</h1>
+
+    <div *ngIf="isCookie">
+        Você está logado
+    </div>
+
+    <div *ngIf="!isCookie">
+        Ops...fazer login
+    </div>
 </div>

@@ -19,6 +19,13 @@ import { TerminalService } from './home/terminais/terminais.service';
 import { ListaTerminaisComponent } from './home/terminais/lista-terminais/lista-terminais.component';
 import { PontoOnibusService } from './home/pontoOnibus/pontoOnibus.service';
 import { HorariosPontoOnibusComponent } from './home/pontoOnibus/horarios-ponto-onibus/horarios-ponto-onibus.component';
+import { SetCookieExampleComponent } from './teste/set-cookie-example/set-cookie-example.component';
+import { GetCookieExampleComponent } from './teste/get-cookie-example/get-cookie-example.component';
+import { CookieService } from './cookie.service';
+import { LoginComponent } from './auth/login/login.component';
+import { LoginService } from './auth/login.service';
+import { ContaComponent } from './auth/conta/conta.component';
+import { ContaService } from './auth/conta.service';
 
 @NgModule({
   declarations: [
@@ -30,7 +37,11 @@ import { HorariosPontoOnibusComponent } from './home/pontoOnibus/horarios-ponto-
     NoticiasComponent,
     SobreComponent,
     ListaTerminaisComponent,
-    HorariosPontoOnibusComponent
+    HorariosPontoOnibusComponent,
+    SetCookieExampleComponent,
+    GetCookieExampleComponent,
+    LoginComponent,
+    ContaComponent
   ],
   imports: [
     BrowserModule,
@@ -47,6 +58,9 @@ import { HorariosPontoOnibusComponent } from './home/pontoOnibus/horarios-ponto-
   providers: [
     TerminalService,
     PontoOnibusService,
+    CookieService,
+    LoginService,
+    ContaService,
     { provide: APP_BASE_HREF, useValue: '/' }
   ],
   bootstrap: [AppComponent]

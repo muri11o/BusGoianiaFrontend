@@ -1,0 +1,28 @@
+<div class="container sub-container">
+
+    <h3>Login</h3><br>
+
+    <div *ngIf="loginFail" class="alert alert-danger" role="alert">
+        Falha ao fazer login!
+      </div>
+
+    <div class="input-group mb-3">
+        <input type="text" [ngModel]="email" (ngModelChange)="email = $event"
+            placeholder="Digite seu email" class="form-control">
+    </div>
+
+    <div class="input-group mb-3">
+        <input type="password" [ngModel]="senha" (ngModelChange)="senha = $event"
+            placeholder="Digite sua senha" class="form-control">
+    </div>
+
+
+    <button type="button" class="btn btn-primary" (click)="login()">Login</button>
+
+    <br>
+    <br>
+    <div>
+        Você ainda não tem uma conta? Clique <a [routerLink]="['/cadastrar']">aqui</a>
+    </div>
+</div>
+
