@@ -21,7 +21,6 @@ export class ListaTerminaisComponent implements OnInit {
     .subscribe(
       terminais => {
         this.root = terminais;
-        console.log(terminais);
       },
       error => console.log(error)
     );

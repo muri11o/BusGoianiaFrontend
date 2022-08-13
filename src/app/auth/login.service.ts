@@ -1,22 +1,27 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable, take } from "rxjs";
+import { AppSettings } from "src/appsettings";
+import { AppSettingsService } from "src/appsettings.service";
 import { Login } from "./login";
 import { RootAccessToken } from "./rootAccessToken";
 
 @Injectable()
 export class LoginService {
 
-    constructor(private http: HttpClient) {}
+    constructor(private http: HttpClient, public appSettingsService: AppSettingsService) {
+        this.settings = {} as AppSettings;
+        this.appSettingsService.getSettings().subscribe(settings => this.settings = settings, () => null, () => {this.settings.baseUrlAuth});
+    }
 
-    protected urlService: string = "https://localhost:7088/v1/api/";
+    public settings: AppSettings;  
     
     obterToken(email: string, senha: string) : Observable<RootAccessToken> {
 
        var login = new Login(email, senha);
 
        return this.http
-       .post<RootAccessToken>(this.urlService + 'auth/login', login);
+       .post<RootAccessToken>(this.settings.baseUrlAuth + 'auth/login', login);
     }
 
 }

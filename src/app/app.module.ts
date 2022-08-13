@@ -26,6 +26,8 @@ import { LoginComponent } from './auth/login/login.component';
 import { LoginService } from './auth/login.service';
 import { ContaComponent } from './auth/conta/conta.component';
 import { ContaService } from './auth/conta.service';
+import { FavoritosService } from './menu/favoritos/favoritos.service';
+import { AppSettingsService } from 'src/appsettings.service';
 
 @NgModule({
   declarations: [
@@ -61,6 +63,8 @@ import { ContaService } from './auth/conta.service';
     CookieService,
     LoginService,
     ContaService,
+    FavoritosService,
+    AppSettingsService,
     { provide: APP_BASE_HREF, useValue: '/' }
   ],
   bootstrap: [AppComponent]

@@ -4,14 +4,22 @@
 
     <div class="input-group mb-3">
         <input type="text" [ngModel]="numeroPontoOnibus" (ngModelChange)="numeroPontoOnibus = $event"
-            placeholder="Digite o nº do ponto de ônibus" class="form-control">
+            placeholder="Exemplo: 0040, 5344, 0111" class="form-control">
         <div class="input-group-append">
             <button type="button" class="btn btn-primary" (click)="getHorariosPontoOnibus()">Ver horário</button>
         </div>
     </div>
     <br><br>
+    <div *ngIf="!isAuthenticated" class="alert alert-warning" role="alert">
+        É necessário estar autenticado para acessar este recurso
+    </div>
     <div *ngIf="numeroPontoOnibusView != ''">
-        <label style="font-weight: bold; font-size: 18px;">Ponto de ônibus: {{numeroPontoOnibusView}}</label>
+
+        <div>
+            <label style="font-weight: bold; font-size: 18px;">Ponto de ônibus: {{numeroPontoOnibusView}}</label>
+        </div>
+
+        <br>
         <table class="table">
             <thead>
                 <tr>
@@ -30,6 +38,9 @@
                 </tr>
             </tbody>
         </table>
+        <div>
+            <button type="button" class="btn btn-warning" (click)="adicionarFavorito()">Favoritar</button>
+        </div>
     </div>
 
 </div>

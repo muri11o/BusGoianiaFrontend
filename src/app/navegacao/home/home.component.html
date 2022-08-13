@@ -32,7 +32,7 @@
             <h4 class="card-title">Mapa da linha</h4>
           </div>
           <div class="card-footer">
-            <a href="#" class="btn btn-primary">Acessar</a>
+            <a href="#" data-toggle="modal" data-target="#exampleModal" class="btn btn-primary">Acessar</a>
           </div>
         </div>
       </div>
@@ -44,7 +44,7 @@
             <h4 class="card-title">Tempo real</h4>
           </div>
           <div class="card-footer">
-            <a href="#" class="btn btn-primary">Acessar</a>
+            <a href="#" data-toggle="modal" data-target="#exampleModal" class="btn btn-primary">Acessar</a>
           </div>
         </div>
       </div>
@@ -56,7 +56,7 @@
             <h4 class="card-title">Tabela frequência</h4>
           </div>
           <div class="card-footer">
-            <a href="#" class="btn btn-primary">Acessar</a>
+            <a href="#" data-toggle="modal" data-target="#exampleModal" class="btn btn-primary">Acessar</a>
           </div>
         </div>
       </div>
@@ -77,10 +77,10 @@
         <div class="card">
           <img class="card-img-top" src="/assets/img6.png" height="164px" width="253px" alt="">
           <div class="card-body">
-            <h4 class="card-title">Autoatendiemnto</h4>
+            <h4 class="card-title">Autoatendimento</h4>
           </div>
           <div class="card-footer">
-            <a href="#" class="btn btn-primary">Acessar</a>
+            <a href="#" data-toggle="modal" data-target="#exampleModal" class="btn btn-primary">Acessar</a>
           </div>
         </div>
       </div>
@@ -92,7 +92,7 @@
             <h4 class="card-title">Pontos de recarga</h4>
           </div>
           <div class="card-footer">
-            <a href="#" class="btn btn-primary">Acessar</a>
+            <a href="#"  data-toggle="modal" data-target="#exampleModal" class="btn btn-primary">Acessar</a>
           </div>
         </div>
       </div>
@@ -101,14 +101,42 @@
         <div class="card">
           <img class="card-img-top" src="/assets/img8.png" height="164px" width="253px" alt="">
           <div class="card-body">
-            <h4 class="card-title">Terminais</h4>
+            <h4 class="card-title">FAQ</h4>
           </div>
           <div class="card-footer">
-            <a href="#" class="btn btn-primary">Acessar</a>
+            <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Acessar</a>
           </div>
         </div>
       </div>
 
     </div>
   </div>
+
+  <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Bus Goiânia</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <label>Recurso não disponível.</label><br><br>
+        <label>Recursos disponíveis nesta POC: </label>
+        <ul>
+          <li>Criar conta</li>
+          <li>Login</li>
+          <li>Consulta horário ponto de ônibus</li>
+          <li>Adicionar ponto de ônibus como favorito</li>
+          <li>Consultar terminais</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
 <!-- Fim Content -->  

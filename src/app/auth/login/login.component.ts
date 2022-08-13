@@ -34,8 +34,11 @@ export class LoginComponent implements OnInit {
         error => this.loginFail = true);
 
     if (!this.loginFail) {
-      this.criarCookieToken();
-      location.href = "/home";
+
+      setTimeout(() => {
+        this.criarCookieToken();
+        location.href = "/home";
+      }, 5000)      
     }
   }
 
