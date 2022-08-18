@@ -5,6 +5,15 @@
     <div *ngIf="cadastroRealizdo" class="alert alert-success" role="alert">
         Conta cadastrada com sucesso
     </div>
+
+    <ul *ngIf="!isValid">
+        <li>Email deve ser válido</li>
+        <li>Senhas devem conter no mínimo 8 caracteres</li>
+        <li>Senhas devem conter ao menos um caracter especial</li>
+        <li>Senhas devem conter ao menos um caracter em caixa baixa ('a'-'z')</li>
+        <li>Senhas devem conter ao menos um caracter em caixa alta ('A'-'Z')</li>
+      </ul>
+
     <div *ngIf="!cadastroRealizdo">
         <div class="input-group mb-3">
             <input type="text" [ngModel]="email" (ngModelChange)="email = $event" placeholder="Digite seu email"
